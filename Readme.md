@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
-* Студент: [Георг Костюкевич](https://up.htmlacademy.ru/htmlcss/30/user/1336743).
-* Наставник: `Неизвестно`.
+- Студент: [Георг Костюкевич](https://up.htmlacademy.ru/htmlcss/30/user/1336743). :mortar_board:
+- Наставник: `Александр Григорьев`. :white_check_mark:
 
 ---
 
