@@ -121,7 +121,7 @@ ul {
   display: block;
   color: var(--basic-white);
   margin-right: 32px;
-  padding: 9px;
+  padding: 9px 15px;
 }
 
 .user-navigation input {
@@ -383,11 +383,13 @@ ul {
   background: brown;
 }
 
-.bestsellers h2 {
+.bestsellers h2,
+.creamy-list h2 {
   text-align: center;
 }
 
-.bestsellers-list {
+.bestsellers-list,
+.price-list {
   margin: 0;
   padding: 0;
   display: flex;
@@ -395,7 +397,8 @@ ul {
   justify-content: space-evenly;
 }
 
-.bestseller-item {
+.bestseller-item,
+.price-item {
   display: flex;
   flex-direction: column;
   width: 293px;
@@ -415,23 +418,36 @@ ul {
   padding: 0;
 }
 
-.bestseller-item img {
-  margin-bottom: -120px;
+.bestseller-item img,
+.price-item img {
+  margin-bottom: -100px;
 }
 
-.bestseller-item p {
+.bestseller-item p,
+.price-item p {
   font-weight: bold;
   font-size: 45px;
   line-height: 45px;
+  margin-bottom: 25px;
 }
 
-.bestseller-item span {
+.bestseller-item p {
+  align-self: flex-start;
+}
+
+.price-item p {
+  margin-left: 15px;
+}
+
+.bestseller-item span,
+.price-item span {
   font-weight: bold;
   font-size: 30px;
   line-height: 35px;
 }
 
-.bestseller-item figcaption {
+.bestseller-item figcaption,
+.price-item h3 {
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
@@ -441,17 +457,28 @@ ul {
   padding: 0;
 }
 
-.bestseller-item a {
+.price-item h3 {
+  order: 1;
+}
+
+.bestseller-item a,
+.price-item a {
   display: none;
   width: 200px;
   margin-top: 15px;
 }
 
-.bestseller-item:hover a {
+.price-item a {
+  order: 2;
+}
+
+.bestseller-item:hover a,
+.price-item:hover a {
   display: inline-flex;
 }
 
-.bestseller-item:hover {
+.bestseller-item:hover,
+.price-item:hover {
   background: rgba(255, 255, 255, 0.2);
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2);
 }
@@ -682,4 +709,154 @@ ul {
 input:focus {
   border: 2px solid rgba(46, 136, 228, 0.52);
   border-radius: 4px;
+}
+
+.current-page,
+.sub-menu a.current-page:hover {
+  background: #d07058;
+  color: var(--basic-dark);
+}
+
+.catalog-creamy h1 {
+  font-size: 35px;
+  line-height: 41px;
+  margin-left: 27px;
+}
+
+.breadcrumbs a {
+  color: var(--basic-white);
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.breadcrumbs a:hover {
+  color: var(--lite-pink);
+}
+
+.site-navigation .current-page {
+  border-radius: 26px;
+  background: #d07058;
+}
+
+.site-navigation .current-page:hover,
+.site-navigation .current-page:focus,
+.site-navigation .current-page:active {
+  background: #d07058;
+  color: var(--basic-white);
+}
+
+.filters {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.filters h2 {
+  margin-left: 100px;
+}
+
+.filters ul,
+.filters li {
+  display: inline-block;
+}
+
+.filters select {
+  height: 36px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  color: var(--basic-white);
+  border: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: lowercase;
+}
+
+.filters fieldset {
+  display: inline-block;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+  margin-left: 30px;
+}
+
+.filters legend {
+  padding: 0;
+}
+
+.filters ul {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0 20px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+}
+
+.filters button {
+  width: 144px;
+  height: 36px;
+  color: var(--basic-white);
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.filters button:hover,
+.filters button:focus {
+  background: var(--basic-white);
+  color: var(--basic-dark);
+}
+
+.filters button:active {
+  background: var(--basic-white);
+  color: var(--basic-dark);
+  box-shadow: inset 0px 2px 1px #696969;
+}
+
+.price-item img,
+.price-item a,
+.price-item h3 {
+  align-self: center;
+}
+
+.pagination-list {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.pagination-item {
+  display: inline-block;
+}
+
+.pagination-item a {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  display: inline-block;
+  color: var(--basic-white);
+  background-color: var(--basic-black);
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.pagination-item a:hover,
+.pagination-item a:focus {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.pagination-item a:active {
+  background-color: var(--back-white);
+  color: var(--basic-dark);
 }
