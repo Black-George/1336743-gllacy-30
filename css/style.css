@@ -345,7 +345,8 @@ img {
 }
 
 .search-item:hover .search-wrapper,
-.search-item:focus-within .search-wrapper {
+.search-item:focus-within .search-wrapper,
+.search-icon:hover + .search-wrapper {
   display: block;
 }
 
@@ -565,7 +566,8 @@ img {
 
 .cart-added:hover + .cart-form,
 .cart-added:focus + .cart-form,
-.cart-form:focus-within {
+.cart-form:focus-within,
+.cart-item:hover .cart-form {
   display: block;
 }
 
@@ -846,6 +848,7 @@ img {
   order: 2;
   align-self: end;
   margin-bottom: 21px;
+  z-index: 10;
   /* outline: solid 5px rgb(212, 255, 95);
   outline-offset: -5px; */
 }
@@ -1084,12 +1087,12 @@ img {
   font-size: 18px;
   line-height: 24px;
   margin-left: 25px;
-  margin-bottom: 30px;
 }
 
 .contact-address {
   display: inline-block;
   width: 250px;
+  margin-bottom: 20px;
 }
 
 .tel-link a {
