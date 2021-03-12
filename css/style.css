@@ -159,15 +159,6 @@ img {
   border-radius: 70px;
   border: none;
   cursor: pointer;
-  /*
-  font-weight: 600;
-  font-size: 31px;
-  line-height: 41px;
-  padding: 12px 44px;
-  border-radius: 50px;
-  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
-  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
-  */
 }
 
 .button:hover,
@@ -206,23 +197,24 @@ img {
 
 .input {
   display: block;
+  border: none;
   color: var(--lite-dark);
   font-family: inherit;
   font-weight: normal;
   font-size: 14px;
   line-height: 16px;
-  border: 1px solid #d3d3d2;
+  outline: 1px solid #d3d3d2;
   border-radius: 4px;
   padding: 15px;
 }
 
 .input:hover {
-  border: 2px solid rgba(178, 178, 178, 0.52);
+  outline: 2px solid rgba(178, 178, 178, 0.52);
   border-radius: 4px;
 }
 
 .input:focus {
-  border: 2px solid rgba(46, 136, 228, 0.52);
+  outline: 2px solid rgba(46, 136, 228, 0.52);
   border-radius: 4px;
 }
 
