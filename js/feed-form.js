@@ -4,6 +4,7 @@ const feedClose = feedPopup.querySelector(".modal-close");
 const feedForm = feedPopup.querySelector(".feed-form");
 const feedInputName = feedPopup.querySelector(".feed-input-name");
 const feedInputEmail = feedPopup.querySelector(".feed-input-email");
+const overlay = document.querySelector(".overlay")
 
 let isStorageSupport = true;
 let storageName = "";
@@ -19,6 +20,7 @@ try {
 feedLink.addEventListener("click", function (evt) {
   evt.preventDefault();
   feedPopup.classList.add("modal-show");
+  overlay.classList.add("overlay-show");
   if (storageName && storageEmail) {
     feedInputName.value = storageName;
     feedInputEmail.value = storageEmail;
@@ -30,6 +32,7 @@ feedLink.addEventListener("click", function (evt) {
 feedClose.addEventListener("click", function (evt) {
   evt.preventDefault();
   feedPopup.classList.remove("modal-show");
+  overlay.classList.remove("overlay-show");
   feedPopup.classList.remove("modal-error");
 });
 

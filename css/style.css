@@ -211,6 +211,14 @@ img {
 
 .input:focus {
   outline: 1px solid rgba(46, 136, 228, 0.52);
+  font-family: inherit;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--basic-dark);
+  padding-top: 13px;
+  padding-bottom: 14px;
 }
 
 .svg-user:hover path,
@@ -221,9 +229,12 @@ img {
 /* Header //////////////////////////////////////////////////////////////////////////////////////////////*/
 
 .main-header {
+  margin-top: 7px;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 50px;
   /* outline: 5px solid rgba(0, 255, 0, 0.7);
   outline-offset: -5px; */
-  margin-top: 7px;
 }
 
 .main-navigation {
@@ -469,10 +480,6 @@ img {
   color: var(--hard-pink);
 }
 
-.login-container a:focus {
-  outline: 3px solid var(--hard-pink);
-}
-
 .login-item {
   position: relative;
 }
@@ -597,7 +604,9 @@ img {
 }
 
 .contacts-wrapper {
-  float: right;
+  position: absolute;
+  right: 0;
+  top: 100%;
 }
 
 .contacts-wrapper p {
@@ -1035,8 +1044,8 @@ img {
   font-size: 16px;
   line-height: 22px;
   margin-left: 20px;
-  margin-top: 20px;
-  margin-bottom: 5px;
+  margin-top: 16px;
+  margin-bottom: 3px;
 }
 
 .blog-news a {
@@ -1105,6 +1114,17 @@ img {
   line-height: 24px;
 }
 
+.spam-form input:focus {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--basic-dark);
+  padding-top: 13px;
+  padding-bottom: 14px;
+}
+
 .spam-form .button {
   padding: 9px 16px;
   margin-left: 11px;
@@ -1118,7 +1138,7 @@ img {
   color: var(--basic-dark);
 }
 
-.contacts::before {
+/* .contacts::before {
   content: "";
   position: absolute;
   top: 136px;
@@ -1126,13 +1146,13 @@ img {
   width: 80px;
   height: 140px;
   background-image: url("../img/decorative/pin-icon.svg");
-}
+} */
 
 .contacts iframe {
   border: none;
-  width: 100vw;
+  /* width: 100vw;
   position: relative;
-  left: calc((1200px - 100vw) / 2);
+  left: calc((1200px - 100vw) / 2); */
 }
 
 .contacts-container {
@@ -1314,7 +1334,7 @@ img {
   position: absolute;
   width: 15px;
   height: 13px;
-  left: -20px;
+  left: -23px;
   top: 6px;
   background-image: url("../img/decorative/heart.svg");
   background-repeat: no-repeat;
@@ -1454,8 +1474,8 @@ img {
   flex-wrap: wrap;
   list-style: none;
   margin: 0;
+margin-top: -30px;;
   padding: 0;
-  margin-top: -30px;
   order: -1;
   /* outline: solid 5px rgb(130, 85, 255);
   outline-offset: -5px; */
@@ -1978,6 +1998,11 @@ input[name="max-price"]:focus {
   color: var(--lite-dark);
 }
 
+.feed-form input:focus {
+  padding-top: 9px;
+  padding-bottom: 11px;
+}
+
 .feed-form p {
   margin: 0;
   margin-bottom: 20px;
@@ -1990,6 +2015,7 @@ input[name="max-price"]:focus {
 .feed-form textarea {
   resize: none;
   width: 428px;
+height: 154px;
   margin-bottom: 6px;
 }
 
@@ -2079,6 +2105,15 @@ input[name="max-price"]:focus {
 }
 
 .overlay {
-  background-image: url("../img/decorative/overlay.png");
-  z-index: 1000;
+  display: none;;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background:rgba(0, 0, 0, 0.3)
+}
+
+.overlay-show {
+  display: block;
 }
