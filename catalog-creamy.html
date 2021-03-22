@@ -46,8 +46,10 @@
           <li class="navigation-item login-item user-item">
             <a class="login-link svg-user" href="#"> <svg aria-hidden="true" focusable="false" width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.04 14.88L12.96 9.5L6.04 4.13V7.04H0V11.96H6.04V14.88Z" fill="white"/> <path d="M18 0H5C4.46957 0 3.96086 0.210714 3.58579 0.585786C3.21071 0.960859 3 1.46957 3 2V4H5V2H18V17H5V15H3V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19H18C18.5304 19 19.0391 18.7893 19.4142 18.4142C19.7893 18.0391 20 17.5304 20 17V2C20 1.46957 19.7893 0.960859 19.4142 0.585786C19.0391 0.210714 18.5304 0 18 0Z" fill="white"/></svg> Вход</a>
             <form class="login-form" action="post">
-              <input class="input" type="email" placeholder="email@example.com">
-              <input class="input" type="password" placeholder="......">
+              <label class="visually-hidden" for="login-email">Электронный адресс</label>
+              <input class="input" id="login-email" type="email" placeholder="email@example.com">
+              <label class="visually-hidden" for="login-password">Пароль</label>
+              <input class="input" id="login-password" type="password" placeholder="......">
               <button type="submit" class="button">Войти</button>
               <div class="login-container">
                 <a class="password-recovery" href="#">Забыли пароль?</a>
@@ -61,14 +63,14 @@
               <table>
                 <tr class="cart-unit">
                   <td class="unit-button"> <button type="button" aria-label="Удалить из корзины"></button> </td>
-                  <td class="unit-image"> <img src="img/decorative/cream-cart.png" width="33" height="33" alt=""> </td>
+                  <td class="unit-image"> <img src="img/decorative/cream-cart.png" width="33" height="33" alt="Пломбир с апельсиновым джемом"> </td>
                   <td class="unit-name">Пломбир с апельсиновым джемом</td>
                   <td class="unit-weight">1,5 кг х  <span>200 руб.</span> </td>
                   <td class="unit-price">300 руб.</td>
                 </tr>
                 <tr class="cart-unit">
                   <td class="unit-button"> <button type="button" aria-label="Удалить из корзины"></button> </td>
-                  <td class="unit-image"> <img src="img/decorative/strawberry-cart.png" width="33" height="33" alt=""> </td>
+                  <td class="unit-image"> <img src="img/decorative/strawberry-cart.png" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада"> </td>
                   <td class="unit-name">Клубничный пломбир с присыпкой из белого шоколада</td>
                   <td class="unit-weight">1,5 кг х <span>300 руб.</span> </td>
                   <td class="unit-price">450 руб.</td>
@@ -97,6 +99,7 @@
         <form class="filters" method="get" target="_blank" action="https://echo.htmlacademy.ru">
           <fieldset>
             <legend>Сортировка:</legend>
+            <label class="visually-hidden" for="sort">Фильтровать по:</label>
             <select class="sort-select" name="сортировка" id="sort">
               <option value="По популярности">По популярности</option>
               <option value="Сначала недорогие">Сначала недорогие</option>
@@ -174,73 +177,73 @@
         <ul class="product-list">
           <li class="product-item" tabindex="0">
             <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
-            <img src="img/product-photo-1.png" width="267" height="267" alt="">
+            <img src="img/product-photo-1.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
             <p>310 ₽<span>/кг</span> </p>
             <a href="#" class="button">Быстрый просмотр</a>
           </li>
           <li class="product-item" tabindex="0">
             <h3>Сливочно-кофейное с кусочками шоколада</h3>
-            <img src="img/product-photo-2.png" width="267" height="267" alt="">
+            <img src="img/product-photo-2.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
             <p>380 ₽<span>/кг</span> </p>
             <a href="#" class="button">Быстрый просмотр</a>
           </li>
           <li class="product-item" tabindex="0">
             <h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
-            <img src="img/product-photo-3.png" width="267" height="267" alt="">
+            <img src="img/product-photo-3.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
             <p>355 ₽<span>/кг</span> </p>
             <a href="#" class="button">Быстрый просмотр</a>
           </li>
           <li class="product-item" tabindex="0">
             <h3>Сливочное крем-брюле <br> с карамельной подливкой</h3>
-            <img src="img/product-photo-4.png" width="267" height="267" alt="">
+            <img src="img/product-photo-4.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
             <p>415 ₽<span>/кг</span> </p>
             <a href="#" class="button">Быстрый просмотр</a>
           </li>
           <li class="product-item" tabindex="0">
             <h3>Сливочное с брусничным джемом</h3>
-            <img src="img/product-photo-5.png" width="267" height="267" alt="">
+            <img src="img/product-photo-5.png" width="267" height="267" alt="Сливочное с брусничным джемом">
             <p>325 ₽<span>/кг</span> </p>
             <a href="#" class="button">Быстрый просмотр</a>
           </li>
           <li class="product-item" tabindex="0">
             <h3>Сливочно-черничное с цельными ягодами черники</h3>
-            <img src="img/product-photo-6.png" width="267" height="267" alt="">
+            <img src="img/product-photo-6.png" width="267" height="267" alt="Сливочно-черничное с цельными ягодами черники">
             <p>410 ₽<span>/кг</span> </p>
             <a href="#" class="button">Быстрый просмотр</a>
           </li>
           <li class="product-item" tabindex="0">
             <h3>Сливочно-лимонное с карамельной присыпкой</h3>
-            <img src="img/product-photo-7.png" width="267" height="267" alt="">
+            <img src="img/product-photo-7.png" width="267" height="267" alt="Сливочно-лимонное с карамельной присыпкой">
             <p>315 ₽<span>/кг</span> </p>
             <a href="#" class="button">Быстрый просмотр</a>
           </li>
           <li class="product-item" tabindex="0">
             <h3>Сливочное с шоколадной стружкой</h3>
-            <img src="img/product-photo-8.png" width="267" height="267" alt="">
+            <img src="img/product-photo-8.png" width="267" height="267" alt="Сливочное с шоколадной стружкой">
             <p>320 ₽<span>/кг</span> </p>
             <a href="#" class="button">Быстрый просмотр</a>
           </li>
           <li class="product-item" tabindex="0">
             <h3>Сливочно-ванильное <br> с кусочками шоколада</h3>
-            <img src="img/product-photo-9.png" width="267" height="267" alt="">
+            <img src="img/product-photo-9.png" width="267" height="267" alt="Сливочно-ванильное с кусочками шоколада">
             <p>440 ₽<span>/кг</span> </p>
             <a href="#" class="button">Быстрый просмотр</a>
           </li>
           <li class="product-item" tabindex="0">
             <h3>Сливочноe с ментоловым сиропом</h3>
-            <img src="img/product-photo-10.png" width="267" height="267" alt="">
+            <img src="img/product-photo-10.png" width="267" height="267" alt="Сливочноe с ментоловым сиропом">
             <p>435 ₽<span>/кг</span> </p>
             <a href="#" class="button">Быстрый просмотр</a>
           </li>
           <li class="product-item" tabindex="0">
             <h3>Сливочное с кусочками черного шоколада</h3>
-            <img src="img/product-photo-11.png" width="267" height="267" alt="">
+            <img src="img/product-photo-11.png" width="267" height="267" alt="Сливочное с кусочками черного шоколада">
             <p>355 ₽<span>/кг</span> </p>
             <a href="#" class="button">Быстрый просмотр</a>
           </li>
           <li class="product-item" tabindex="0">
             <h3>Сливочное с мятным сиропом</h3>
-            <img src="img/product-photo-12.png" width="267" height="267" alt="">
+            <img src="img/product-photo-12.png" width="267" height="267" alt="Сливочное с мятным сиропом">
             <p>420 ₽<span>/кг</span> </p>
             <a href="#" class="button">Быстрый просмотр</a>
           </li>
