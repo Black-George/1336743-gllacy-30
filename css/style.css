@@ -1820,8 +1820,7 @@ img {
   margin-right: 3px;
 }
 
-:not(.filter-input-checkbox:checked) + .filler-label::before,
-.filter-input-checkbox:disabled + .filler-label::before  {
+:not(.filter-input-checkbox:checked) + .filler-label::before  {
   content: "";
   position: absolute;
   background-image: url(../img/decorative/checkbox-off.svg);
@@ -1830,14 +1829,6 @@ img {
   left: -32px;
   top: -1px;
   opacity: 0.8;
-}
-
-.filter-input-checkbox:disabled + .filler-label::before {
-  opacity: 0.4;
-}
-
-.filter-input-checkbox:disabled + .filler-label::after {
-  background-image: none;
 }
 
 .filter-input-checkbox:checked + label::after {
@@ -1863,12 +1854,17 @@ img {
 }
 
 .filter-input-radio:disabled + label:hover::before,
-.filter-input-checkbox:disabled + .filler-label:hover::before {
+.filter-input-checkbox:disabled + .filler-label::after,
+.filter-input-checkbox:disabled + .filler-label:hover::after {
   opacity: 0.4;
 }
 
-.filter-input-radio:disabled + label::after {
+.filter-input-checkbox:disabled + .filler-label::before {
   background-image: none;
+}
+
+.filter-input-radio:disabled + label::after {
+  opacity: 0.4;
 }
 
 .filter-input-radio:focus + label::before,
